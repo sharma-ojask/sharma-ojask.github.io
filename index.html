@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Ojas Sharma Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -12,73 +13,99 @@
             background-color: #f0f4f8;
             color: #1a1a1a;
         }
+
         header {
             text-align: center;
             padding: 60px 20px 40px;
             background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
             color: white;
         }
+
         header h1 {
             margin: 0;
             font-size: 3em;
         }
+
         header p {
             font-size: 1.2em;
         }
+
         .projects {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
             gap: 30px;
             padding: 40px 20px;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
+
         .project-card {
             background: white;
-            width: 300px;
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
+            padding: 20px;
+            display: flex;
+            gap: 24px;
             transition: transform 0.3s ease;
         }
+
         .project-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
         }
+
         .project-card img {
-            width: 100%;
-            height: 180px;
+            width: 260px;
+            height: 160px;
             object-fit: cover;
+            border-radius: 10px;
         }
+
         .project-card .content {
-            padding: 20px;
+            flex: 1;
         }
+
         .project-card h3 {
             margin: 0 0 10px;
             font-size: 1.3em;
+        }
+
+        .project-card h3 a {
+            text-decoration: none;
             color: #0366d6;
         }
+
+        .project-card h3 a:hover {
+            text-decoration: underline;
+        }
+
         .project-card p {
             font-size: 0.95em;
-            margin: 5px 0;
+            margin: 10px 0;
             color: #555;
-        }
-        .project-card .contribution {
-            margin-top: 10px;
-            font-weight: 600;
-            color: #333;
+            line-height: 1.6;
         }
 
         .project-card ul.contribution {
             padding-left: 0;
-            margin: 10px 0 0;
+            margin: 12px 0 0;
             list-style-position: inside;
         }
 
         .project-card ul.contribution li {
-            margin-left: 0;
             font-size: 0.95em;
             color: #555;
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                flex-direction: column;
+            }
+
+            .project-card img {
+                width: 100%;
+                height: 200px;
+            }
         }
 
         footer {
@@ -89,58 +116,97 @@
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Ojas Sharma</h1>
-        <p>Machine Learning & Analytics Projects</p>
-    </header>
 
-    <section class="projects">
-        <!-- Project 1 -->
-        <div class="project-card">
-            <img src="thumbnails/global_forest_cover.png" alt="Global Forest Cover">
-            <div class="content">
-                <h3><a href="https://github.com/sharma-ojask/GlobalForestCover" target="_blank">Global Forest Cover Visualizer</a></h3>
-                <p>An interactive visualizer that analyzes global forest cover trends throughout the 21st century. The tool enables users to explore historical patterns of deforestation and reforestation across regions and generates forward-looking forecasts to estimate future forest cover under observed trends.</p>
-                <ul class="contribution">
-                  <li>Converted satellite imagery into pixel-level features for time series modeling.</li>
-                  <li>Led forecasting model development for global forest cover trends.</li>
-                </ul>
-            </div>
+<header>
+    <h1>Ojas Sharma</h1>
+    <p>Machine Learning & Analytics Projects</p>
+</header>
+
+<section class="projects">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+        <img src="thumbnails/global_forest_cover.png" alt="Global Forest Cover">
+
+        <div class="content">
+            <h3>
+                <a href="https://github.com/sharma-ojask/GlobalForestCover" target="_blank">
+                    Global Forest Cover Visualizer
+                </a>
+            </h3>
+
+            <p>
+                An interactive visualizer that analyzes global forest cover trends throughout
+                the 21st century. The tool enables users to explore historical patterns of
+                deforestation and reforestation across regions and generates forward-looking
+                forecasts to estimate future forest cover under observed trends.
+            </p>
+
+            <ul class="contribution">
+                <li>Converted satellite imagery into pixel-level features for time series modeling</li>
+                <li>Led forecasting model development for global forest cover trends</li>
+            </ul>
         </div>
+    </div>
 
-        <!-- Project 2 -->
-        <div class="project-card">
-            <img src="thumbnails/wikiqa_span.png" alt="WikiQA Span Extraction">
-            <div class="content">
-                <h3><a href="https://github.com/sharma-ojask/WikiQASpanExtraction" target="_blank">WikiQA Span Extraction</a></h3>
-                <p>A natural language processing project focused on extractive question answering using the WikiQA dataset. The system identifies and selects precise answer spans from Wikipedia passages in response to user questions, emphasizing alignment-based reasoning rather than generative text output.</p>
-                <ul class="contribution">
-                  <li>Implemented tokenization and span alignment for extractive QA.</li>
-                  <li>Handled noisy annotations and edge cases in the dataset.</li>
-                  <li>Designed span-level evaluation methodology.</li>
-                </ul>
-            </div>
+    <!-- Project 2 -->
+    <div class="project-card">
+        <img src="thumbnails/wikiqa_span.png" alt="WikiQA Span Extraction">
+
+        <div class="content">
+            <h3>
+                <a href="https://github.com/sharma-ojask/WikiQASpanExtraction" target="_blank">
+                    WikiQA Span Extraction
+                </a>
+            </h3>
+
+            <p>
+                A natural language processing project focused on extractive question answering
+                using the WikiQA dataset. The system identifies precise answer spans from
+                Wikipedia passages, emphasizing alignment-based reasoning rather than
+                generative text output.
+            </p>
+
+            <ul class="contribution">
+                <li>Implemented tokenization and span alignment for extractive QA</li>
+                <li>Handled noisy annotations and dataset edge cases</li>
+                <li>Designed span-level evaluation methodology</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="project-card">
-            <img src="thumbnails/net_migration.png" alt="Net Migration in the Middle East">
-            <div class="content">
-                <h3><a href="https://hkanthi3.wixsite.com/infovizzards" target="_blank">Net Migration in the Middle East</a></h3>
-                <p>Exploring 21st-century migration trends in the Middle East through conflict-driven narratives using interactive dashboards and storytelling.</p>
-                <ul class="contribution">
-                    <li>Developed dashboards and narrative scrollytelling</li>
-                    <li>Led the Syrian Civil War chapter of the project</li>
-                </ul>
-            </div>
+    <!-- Project 3 (Wix) -->
+    <div class="project-card">
+        <img src="thumbnails/net_migration.png" alt="Net Migration in the Middle East">
+
+        <div class="content">
+            <h3>
+                <a href="https://hkanthi3.wixsite.com/infovizzards" target="_blank">
+                    Net Migration in the Middle East
+                </a>
+            </h3>
+
+            <p>
+                A data storytelling project examining 21st-century net migration trends in
+                the Middle East through the lens of conflict. The project combines interactive
+                dashboards, scrollytelling, and narrative structure to contextualize population
+                movement alongside geopolitical events.
+            </p>
+
+            <ul class="contribution">
+                <li>Contributed to dashboard development and narrative storytelling</li>
+                <li>Led the Syrian Civil War chapter and scrollytelling design</li>
+            </ul>
         </div>
+    </div>
 
+</section>
 
-        
+<footer>
+    © 2025 Ojas Sharma
+</footer>
 
-        <!-- Add more projects following the same structure -->
-    </section>
-
-    
 </body>
 </html>
