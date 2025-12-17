@@ -66,16 +66,32 @@
 
         /* ---------- About Me ---------- */
         .about {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 50px auto;
             padding: 0 20px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .about img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .about-text h2 {
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
             font-size: 1.05em;
             line-height: 1.7;
             color: #333;
-        }
-
-        .about h2 {
-            font-size: 2em;
             margin-bottom: 15px;
         }
 
@@ -147,7 +163,20 @@
             margin-bottom: 4px;
         }
 
+        /* ---------- Placeholder Style ---------- */
+        .placeholder {
+            opacity: 0.7;
+            border: 2px dashed #ccc;
+        }
+
+        /* ---------- Responsive ---------- */
         @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
             .project-card {
                 flex-direction: column;
             }
@@ -183,22 +212,24 @@
 <!-- ================= ABOUT ================= -->
 <section id="about" class="tab-content active">
     <div class="about">
-        <h2>About Me</h2>
-        <p>
-            I’m an undergraduate at Georgia Tech with experience spanning machine learning,
-            data analytics, and product management. My work focuses on building technically
-            rigorous systems while staying grounded in real-world impact — particularly in
-            healthcare, public policy, and human-centered AI.
-        </p>
-        <p>
-            I’ve worked across research labs, industry teams, and product roles, which has
-            shaped how I approach problems: balancing model performance with interpretability,
-            user trust, and deployment constraints.
-        </p>
-        <p>
-            I’m especially interested in applied ML, NLP, and decision-making systems that
-            address inequities and improve access to information and resources.
-        </p>
+        <img src="thumbnails/ojas_headshot.png" alt="Ojas Sharma Headshot">
+
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+                I’m an undergraduate at Georgia Tech with experience spanning machine learning,
+                data analytics, and product management. My work focuses on building technically
+                rigorous systems while staying grounded in real-world impact.
+            </p>
+            <p>
+                I’ve worked across research labs, industry teams, and product roles, shaping how
+                I think about modeling, evaluation, and deployment in human-centered systems.
+            </p>
+            <p>
+                I’m especially interested in applied ML, NLP, and decision-making systems that
+                address inequities in healthcare, public policy, and access to information.
+            </p>
+        </div>
     </div>
 </section>
 
@@ -216,8 +247,8 @@
                     </a>
                 </h3>
                 <p>
-                    An interactive visualizer that analyzes global forest cover trends
-                    throughout the 21st century and generates forward-looking forecasts.
+                    Interactive analysis of global forest cover trends with forward-looking
+                    forecasts based on satellite-derived time series data.
                 </p>
                 <ul class="contribution">
                     <li>Converted satellite imagery into pixel-level features</li>
@@ -236,12 +267,27 @@
                     </a>
                 </h3>
                 <p>
-                    Extractive QA system that identifies precise answer spans using
-                    alignment-based reasoning.
+                    Extractive QA system that selects precise answer spans using
+                    alignment-based reasoning rather than generative output.
                 </p>
                 <ul class="contribution">
                     <li>Tokenization & span alignment</li>
                     <li>Span-level evaluation design</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Placeholder Project -->
+        <div class="project-card placeholder">
+            <img src="thumbnails/placeholder.png" alt="Coming Soon">
+            <div class="content">
+                <h3>Upcoming Technical Project</h3>
+                <p>
+                    This space is reserved for an upcoming project exploring applied machine
+                    learning and decision-making systems.
+                </p>
+                <ul class="contribution">
+                    <li>Details coming soon</li>
                 </ul>
             </div>
         </div>
@@ -252,7 +298,6 @@
 <!-- ================= NON-TECHNICAL PROJECTS ================= -->
 <section id="nontechnical" class="tab-content">
     <div class="projects">
-
         <div class="project-card">
             <img src="thumbnails/net_migration.png" alt="Net Migration">
             <div class="content">
@@ -262,16 +307,15 @@
                     </a>
                 </h3>
                 <p>
-                    A narrative-driven data visualization project exploring migration
-                    patterns through interactive dashboards and scrollytelling.
+                    Narrative-driven data storytelling project exploring migration through
+                    conflict, dashboards, and scrollytelling.
                 </p>
                 <ul class="contribution">
-                    <li>Dashboard and narrative design</li>
-                    <li>Led Syrian Civil War case study</li>
+                    <li>Dashboard and narrative development</li>
+                    <li>Led Syrian Civil War chapter</li>
                 </ul>
             </div>
         </div>
-
     </div>
 </section>
 
