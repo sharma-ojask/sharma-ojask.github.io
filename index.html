@@ -120,11 +120,11 @@
         }
 
         .project-card img {
-            width: 260px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+    width: 350px;       /* wider for more presence */
+    height: 280px;      /* taller for balance with long descriptions */
+    object-fit: cover;
+    border-radius: 12px;
+}
 
         .project-card .content {
             flex: 1;
@@ -181,15 +181,11 @@
                 flex-direction: column;
             }
 
-            .project-card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    padding: 20px;
-    display: flex;
-    gap: 24px;
-    align-items: center; /* <-- this vertically centers image and content */
-    transition: transform 0.3s ease;
+           .project-card img {
+    width: 350px;       /* wider for more presence */
+    height: 280px;      /* taller for balance with long descriptions */
+    object-fit: cover;
+    border-radius: 12px;
 }
         }
 
